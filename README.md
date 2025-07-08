@@ -1,3 +1,133 @@
+
+# 💗 Blog Pessoal - NestJS API
+
+API RESTful desenvolvida com **NestJS**, estruturada seguindo o padrão **MVC (Model-View-Controller)** e utilizando **TypeORM** para acesso ao banco de dados relacional.
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- [NestJS](https://nestjs.com/)
+- [TypeORM](https://typeorm.io/)
+- [MySQL / PostgreSQL / SQLite](https://www.npmjs.com/package/mysql2)
+- [JWT (Autenticação)](https://jwt.io/)
+- [Swagger (Documentação)](https://swagger.io/tools/swagger-ui/)
+- [Jest (Testes)](https://jestjs.io/)
+- ESLint + Prettier
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── auth/                 # Módulo de autenticação (JWT, login)
+├── data/services/        # Configurações de ambiente (prod/dev)
+├── postagem/             # CRUD de postagens
+│   ├── controllers/
+│   ├── entities/
+│   └── services/
+├── tema/                 # CRUD de temas
+├── usuario/              # CRUD de usuários
+├── app.module.ts         # Módulo principal
+├── main.ts               # Arquivo de bootstrap
+test/                     # Testes unitários e e2e
+```
+
+---
+
+## ⚙️ Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/) (recomendado: versão 18 ou superior)
+- [npm](https://www.npmjs.com/) 
+- Banco de dados:
+  - MySQL / PostgreSQL / SQLite 
+
+---
+
+## 📦 Instalação
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/blogpessoal.git
+cd blogpessoal
+
+# 2. Instale as dependências
+npm install
+
+---
+
+## ▶️ Executando o projeto
+
+### Ambiente de desenvolvimento:
+```bash
+npm run start:dev
+```
+
+## 📄 Documentação Swagger
+
+Após iniciar o servidor, acesse:
+
+```
+http://localhost:4000
+```
+
+Lá você poderá testar todos os endpoints da API com autenticação JWT e ver descrições das rotas.
+
+---
+
+## ✅ Testes
+
+- Testes unitários:
+```bash
+npm run test
+```
+
+- Cobertura:
+```bash
+npm run test:cov
+```
+
+- Testes e2e (end-to-end):
+```bash
+npm run test:e2e
+```
+
+---
+
+## 🧠 Funcionalidades
+
+- Cadastro e login de usuários
+- Autenticação com JWT
+- CRUD de Postagens
+- CRUD de Temas
+- Relacionamento entre Postagem e Tema
+- Documentação automática com Swagger
+- Validação com `class-validator`
+- Suporte para múltiplos bancos (MySQL, PostgreSQL, SQLite)
+
+---
+
+## 📌 Boas práticas adotadas
+
+- Separação por módulos (estrutura modularizada)
+- Princípios SOLID
+- DTOs para entrada e saída de dados
+- Uso de `services` para regra de negócio
+- Configuração dinâmica do TypeORM (`prod.service.ts`, `dev.service.ts`)
+
+---
+
+## 👩🏼‍💻 Autora
+
+**Ysabella Santos**  
+Desenvolvedora Full Stack | NestJS • TypeScript • SQL  
+[LinkedIn](https://www.linkedin.com/in/ysa-santos/) 
+
+---
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
@@ -25,74 +155,9 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+## 📃 Licença
 
-## Compile and run the project
+Este projeto está sob a licença **UNLICENSED** (projeto acadêmico ou privado).
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
