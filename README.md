@@ -1,7 +1,7 @@
 
 # 💗 Blog Pessoal - NestJS API
 
-API RESTful desenvolvida com **NestJS**, estruturada seguindo o padrão **MVC (Model-View-Controller)** e utilizando **TypeORM** para acesso ao banco de dados relacional.
+API REST desenvolvida com **NestJS**, estruturada seguindo o padrão **MVC (Model-View-Controller)** e utilizando **TypeORM** para acesso ao banco de dados relacional.
 
 ---
 
