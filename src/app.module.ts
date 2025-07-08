@@ -6,13 +6,13 @@ import { AuthModule } from './auth/auth.module';
 import { PostagemModule } from './postagem/postagem.module';
 import { TemaModule } from './tema/tema.module';
 import { UsuarioModule } from './usuario/usuario.module';
-import { DevService } from './data/services/dev.service';
+import { ProdService } from './data/services/prod.service';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRootAsync({
-      useClass: DevService,
+      useClass: ProdService,
       imports: [ConfigModule],
     }),
     PostagemModule,
