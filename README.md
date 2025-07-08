@@ -85,7 +85,6 @@ Lá você poderá testar todos os endpoints da API com autenticação JWT e ver 
 npm run test
 ```
 
-- Cobertura:
 ```bash
 npm run test:cov
 ```
@@ -113,8 +112,6 @@ npm run test:e2e
 ## 📌 Boas práticas adotadas
 
 - Separação por módulos (estrutura modularizada)
-- Princípios SOLID
-- DTOs para entrada e saída de dados
 - Uso de `services` para regra de negócio
 - Configuração dinâmica do TypeORM (`prod.service.ts`, `dev.service.ts`)
 
